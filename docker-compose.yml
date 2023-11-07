@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+ lichess-bot: 
+    image: budget-snorkel:latest
+    container_name: budget-snorkel
+    restart: unless-stopped
+    volumes:
+      - $PWD/config.yml:/opt/app/config.yml
+      - $PWD/engines:/opt/app/engines
